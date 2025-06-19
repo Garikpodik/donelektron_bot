@@ -18,7 +18,7 @@ ADMIN_CHAT_ID = "453926083"
 
 DB_NAME = "applications.db"
 
-# --- Функции для работы с базой данных ---
+
 def init_db():
     """Инициализирует базу данных и создает таблицу applications, если ее нет."""
     conn = sqlite3.connect(DB_NAME)
