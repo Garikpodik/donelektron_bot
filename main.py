@@ -20,7 +20,7 @@ DB_NAME = "applications.db"
 
 
 def init_db():
-    """Инициализирует базу данных и создает таблицу applications, если ее нет."""
+    
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("""
@@ -41,7 +41,6 @@ def init_db():
     logging.info("База данных SQLite инициализирована.")
 
 def save_application_to_db(app_data: dict):
-    """Сохраняет новую заявку в базу данных."""
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("""
